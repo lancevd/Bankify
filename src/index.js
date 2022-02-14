@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import debitCards from "./cCards.jpg"
+import digitalBanking from "./dbank.jpg"
+import savings from "./savingss.jpg"
 
 function NavBar() {
   return (
@@ -9,7 +12,7 @@ function NavBar() {
       <Hero />
       <Features />
       <CTA />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
@@ -27,20 +30,20 @@ const NavMenu = () => {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#section-1">
+          <a className="nav-link" href="#features">
             Features
           </a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#section-2">
-            Operations
+          <a className="nav-link" href="#">
+            Wallet
           </a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#section-3">
-            Testimonials
+          <a className="nav-link" href="#">
+            Contact
           </a>
         </li>
 
@@ -71,21 +74,20 @@ const Hero = () => {
 const Features = () => {
   return (
     <div id="features">
-      <div class="section-title">
-        <h2 class="section-description">Features</h2>
-        <h3 class="section-header">
-          Everything you need in a modern bank and more.
+      <div className="section-title">
+        <h2 className="section-description">Features</h2>
+        <h3 className="section-header">
+          Get the 21st Century Banking Experience
         </h3>
       </div>
-      <div class="features">
+      <div className="features">
         <img
-          src="img/digital-lazy.jpg"
-          data-src="img/digital.jpg"
-          alt="Computer"
-          class="features-img lazy-img"
+          src={digitalBanking}
+          alt="Digital Bank"
+          className="features-img "
         />
-        <div class="features-feature">
-          <h5 class="features-header">100% digital bank</h5>
+        <div className="features-feature">
+          <h5 className="features-header">100% digital bank</h5>
           <p>
             Do you hate the bank hassle, queue, and stress? We do too! This is
             why we have made it an 100% online banking. You can make all your
@@ -93,8 +95,8 @@ const Features = () => {
           </p>
         </div>
 
-        <div class="features-feature">
-          <h5 class="features-header">Control Your Spending</h5>
+        <div className="features-feature">
+          <h5 className="features-header">Control Your Spending</h5>
           <p>
             With bankify, you can choose a savings plan. With this, you can
             control how you spend and save up monthly, anually, weekly, or even
@@ -102,20 +104,18 @@ const Features = () => {
           </p>
         </div>
         <img
-          src="img/grow-lazy.jpg"
-          data-src="img/grow.jpg"
-          alt="Plant"
-          class="features-img lazy-img"
+          src={savings}
+          alt="Savings"
+          className="features-img "
         />
 
         <img
-          src="img/card-lazy.jpg"
-          data-src="img/card.jpg"
-          alt="Credit card"
-          class="features-img lazy-img"
+          src={debitCards}
+          alt="Savings"
+          className="features-img "
         />
-        <div class="features-feature">
-          <h5 class="features-header">Free debit card included</h5>
+        <div className="features-feature">
+          <h5 className="features-header">Free debit card included</h5>
           <p>
             With Bankify visa card and mastercard, you can make online payments,
             POS, and withdraw at local ATMs without any issues!
@@ -128,64 +128,64 @@ const Features = () => {
 
 const CTA = () => {
   return (
-    <section class="section section-sign-up">
-      <div class="section-title">
-        <h3 class="section-header">
+    <section className="section section-sign-up">
+      <div className="section-title">
+        <h3 className="section-header">
           What are you waiting for? Join Bankify today and get a welcome bonus
           of &#8358;1000
         </h3>
       </div>
-      <button class="btn">Open your free account today!</button>
+      <button className="btn">Open your free account today!</button>
     </section>
   );
 };
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <ul class="footer-nav">
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+    <footer className="footer">
+      <ul className="footer-nav">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             About
           </a>
         </li>
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             Pricing
           </a>
         </li>
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             Terms of Use
           </a>
         </li>
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             Privacy Policy
           </a>
         </li>
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             Careers
           </a>
         </li>
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             Blog
           </a>
         </li>
-        <li class="footer-item">
-          <a class="footer-link" href="#">
+        <li className="footer-item">
+          <a className="footer-link" href="#">
             Contact Us
           </a>
         </li>
       </ul>
 
-      <p class="footer-copyright">
+      <p className="footer-copyright">
         &copy; Bankify 2022 | All Rights Reserved
       </p>
     </footer>
   );
-}
+};
 
 ReactDOM.render(<NavBar />, document.getElementById("root"));
